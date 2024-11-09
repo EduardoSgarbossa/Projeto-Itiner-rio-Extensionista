@@ -41,6 +41,11 @@ body {
     color: #ccc;
 }
 
+/* Oculta o botão de alternância permanentemente */
+.navbar-toggler {
+    display: none !important;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -63,7 +68,7 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .card h3 {
@@ -163,6 +168,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .show {
     #overlay {
         position: fixed;
@@ -177,24 +183,25 @@ body {
       
       #overlay.show {
         display: block;
-      };
-  }
-  .card-body {
+      }
+}
+
+.card-body {
     overflow-y: auto;
     max-height: 88vh; /* adjust the max-height to a percentage of the viewport height */
     padding: 20px; /* add some padding to make the content more readable */
-  }
-  .card-header {
+}
+
+.card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ddd;
-  }
-  
- 
-  .close-button {
+}
+
+.close-button {
     position: absolute;
     top: 0px;
     right: 0px;
-  }
+}
