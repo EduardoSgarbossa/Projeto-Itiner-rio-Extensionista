@@ -188,10 +188,13 @@ body {
 
 .card-body {
     overflow-y: auto;
-    max-height: 88vh; /* adjust the max-height to a percentage of the viewport height */
-    padding: 20px; /* add some padding to make the content more readable */
-    background-color: #f20707;
+    max-height: 88vh;
+    padding: 20px;
+    background-color: #049ff300;
+    width: 100%; /* Garante que o fundo cobre toda a largura */
+    height: 100%; /* Garante que o fundo cobre toda a altura */
 }
+
 
 .card-header {
     display: flex;

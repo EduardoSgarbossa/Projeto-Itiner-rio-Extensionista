@@ -26,10 +26,10 @@ const dashboardCards = [
     id: 2,
     title: "Conceitos Básicos em C#",
     content: `
-        <p>C# é uma linguagem de programação moderna, orientada a objetos, desenvolvida pela Microsoft. É amplamente utilizada para desenvolver aplicações desktop, web e jogos. Vamos explorar alguns conceitos básicos:</p>
+        <p>C# é uma linguagem de programação moderna e orientada a objetos, desenvolvida pela Microsoft. Ela é usada em uma ampla gama de aplicações, desde aplicativos desktop e web até desenvolvimento de jogos. A seguir, vamos explorar alguns dos conceitos mais básicos em C#:</p>
         
         <h3>1. Estruturas de Controle</h3>
-        <p>As estruturas de controle permitem que você direcione o fluxo do seu programa. Por exemplo, um simples programa que verifica se um número é par ou ímpar:</p>
+        <p>Estruturas de controle ajudam a definir o fluxo do programa, permitindo a criação de condições e repetições. Aqui está um exemplo que verifica se um número é par ou ímpar:</p>
         
         <pre><code>int numero = 10;
 if (numero % 2 == 0) {
@@ -38,74 +38,111 @@ if (numero % 2 == 0) {
     Console.WriteLine("O número é ímpar.");
 }</code></pre>
         
+        <p>Outras estruturas de controle incluem loops como <code>for</code>, <code>while</code> e <code>foreach</code>, que repetem um bloco de código várias vezes.</p>
+        
         <h3>2. Tipos de Dados</h3>
-        <p>C# possui vários tipos de dados, como <code>int</code>, <code>string</code>, <code>bool</code>, entre outros. Veja como declarar variáveis:</p>
+        <p>Em C#, variáveis são declaradas com tipos específicos, como <code>int</code> para números inteiros, <code>string</code> para texto e <code>bool</code> para valores booleanos (verdadeiro ou falso). Aqui estão alguns exemplos:</p>
         
         <pre><code>string nome = "João";
 int idade = 30;
 bool ativo = true;</code></pre>
         
+        <p>Esses tipos ajudam o compilador a verificar se o código está correto e a otimizar a execução.</p>
+        
         <h3>3. Funções</h3>
-        <p>Funções são blocos de código que realizam uma tarefa específica. Aqui está um exemplo de uma função que calcula a soma de dois números:</p>
+        <p>Funções são blocos de código que realizam uma tarefa específica e podem ser chamadas em diferentes partes do programa. No exemplo abaixo, criamos uma função chamada <code>Somar</code> que retorna a soma de dois números:</p>
         
         <pre><code>int Somar(int a, int b) {
     return a + b;
 }
 Console.WriteLine(Somar(5, 3)); // Saída: 8</code></pre>
+
+        <p>Funções tornam o código mais organizado e reutilizável.</p>
+        
+        <h3>4. Variáveis e Constantes</h3>
+        <p>Em C#, variáveis podem armazenar dados que podem mudar durante a execução do programa. Constantes, por outro lado, são valores fixos:</p>
+        
+        <pre><code>int idade = 25; // variável
+const double PI = 3.14159; // constante</code></pre>
         
         <img src="./images/image2.jpg" alt="Conceitos Básicos em C#">
     `,
-    detalhes: "Este conteúdo é uma introdução aos conceitos básicos de C#, ideal para iniciantes que desejam desenvolver suas habilidades.",
+    detalhes: "Este conteúdo é uma introdução aos conceitos básicos de C#, ideal para iniciantes que desejam desenvolver suas habilidades. Inclui exemplos práticos para facilitar o aprendizado.",
     image: "image2.jpg"
 },
-{
-    id: 3,
-    title: "Programação Orientada a Objetos",
-    content: `
-        <p>A Programação Orientada a Objetos (POO) é um paradigma que utiliza 'objetos' para modelar dados e comportamentos. Vamos explorar seus princípios fundamentais:</p>
-        
-        <h3>1. Classes e Objetos</h3>
-        <p>Uma classe é um molde para criar objetos. Por exemplo, uma classe <code>Carro</code> pode ser definida assim:</p>
-        
-        <pre><code>class Carro {
-    public string Modelo { get; set; }
-    public string Cor { get; set; }
 
-    public void Acelerar() {
-        Console.WriteLine("O carro está acelerando.");
-    }
-}</code></pre>
-        
-        <h3>2. Herança</h3>
-        <p>A herança permite que uma classe herde características de outra. Por exemplo:</p>
-        
-        <pre><code>class Veiculo {
-    public int NumeroDeRodas { get; set; }
+{
+  id: 3,
+  title: "Programação Orientada a Objetos",
+  content: `
+      <p>A Programação Orientada a Objetos (POO) é um paradigma de programação que usa 'objetos' para modelar dados e comportamentos. Em C#, a POO é fundamental, pois permite organizar o código de forma clara e modular. Vamos explorar seus principais conceitos:</p>
+      
+      <h3>1. Classes e Objetos</h3>
+      <p>Classes são estruturas que definem propriedades e comportamentos de um objeto. Objetos são instâncias de classes, ou seja, representam elementos específicos. Exemplo de uma classe <code>Carro</code>:</p>
+      
+      <pre><code>class Carro {
+  public string Modelo { get; set; }
+  public string Cor { get; set; }
+
+  public void Acelerar() {
+      Console.WriteLine("O carro está acelerando.");
+  }
+}
+
+// Criando um objeto
+Carro meuCarro = new Carro();
+meuCarro.Modelo = "Fusca";
+meuCarro.Cor = "Azul";</code></pre>
+
+      <h3>2. Herança</h3>
+      <p>A herança permite que uma classe herde atributos e métodos de outra. Isso promove o reaproveitamento de código. Exemplo:</p>
+      
+      <pre><code>class Veiculo {
+  public int NumeroDeRodas { get; set; }
 }
 
 class Carro : Veiculo {
-    public string Modelo { get; set; }
+  public string Modelo { get; set; }
 }</code></pre>
-        
-        <h3>3. Polimorfismo</h3>
-        <p>Polimorfismo permite que métodos com o mesmo nome se comportem de maneira diferente em classes diferentes:</p>
-        
-        <pre><code>class Animal {
-    public virtual void FazerSom() {
-        Console.WriteLine("Som de animal.");
-    }
+
+      <p>No exemplo, a classe <code>Carro</code> herda de <code>Veiculo</code>, o que significa que <code>Carro</code> tem uma propriedade <code>NumeroDeRodas</code>.</p>
+      
+      <h3>3. Polimorfismo</h3>
+      <p>O polimorfismo permite que métodos com o mesmo nome se comportem de maneira diferente, dependendo da classe. Exemplo:</p>
+      
+      <pre><code>class Animal {
+  public virtual void FazerSom() {
+      Console.WriteLine("Som de animal.");
+  }
 }
 
 class Cachorro : Animal {
-    public override void FazerSom() {
-        Console.WriteLine("Au Au!");
-    }
+  public override void FazerSom() {
+      Console.WriteLine("Au Au!");
+  }
 }</code></pre>
-        
-        <img src="./images/image3.jpg" alt="Programação Orientada a Objetos">
-    `,
-    detalhes: "Este conteúdo oferece uma visão abrangente dos princípios da programação orientada a objetos, essencial para o desenvolvimento de software.",
-    image: "image3.jpg"
+
+      <p>O método <code>FazerSom</code> é implementado de forma diferente em <code>Animal</code> e <code>Cachorro</code>.</p>
+      
+      <h3>4. Encapsulamento</h3>
+      <p>Encapsulamento é o princípio de restringir o acesso direto a certos dados e métodos de uma classe. Isso melhora a segurança e a organização do código:</p>
+      
+      <pre><code>class Pessoa {
+  private string nome;
+
+  public void SetNome(string nome) {
+      this.nome = nome;
+  }
+
+  public string GetNome() {
+      return nome;
+  }
+}</code></pre>
+      
+      <img src="./images/image3.jpg" alt="Programação Orientada a Objetos">
+  `,
+  detalhes: "Este conteúdo oferece uma visão abrangente dos princípios da programação orientada a objetos, essencial para o desenvolvimento de software. Inclui exemplos para facilitar a compreensão de cada conceito.",
+  image: "image3.jpg"
 },
 {
   id: 4,
